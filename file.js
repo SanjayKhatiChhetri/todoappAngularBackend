@@ -1,0 +1,7 @@
+DB_PORT=5432
+DB_HOST=localhost
+DB_USER=todoapp_user
+DB_PASSWORD=Authorize
+DB_NAME=todo_angular_db
+
+JWT_SECRET=95298d21ad8aae6e069b4da2cfccc22e8f859836bff9504ffaadf3ee6d91064c981fd7d8f3217b89d33add92cafcc7c3fa56d1095cf592d99af7c60e1061d2c5
