@@ -2,13 +2,17 @@ const { Sequelize } = require("sequelize");
 require("dotenv").config();
 
 const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
+  //using connection string
+  process.env.DATABASE_URL,
   {
-    host: process.env.DB_HOST,
     dialect: "postgres",
-    logging: false, // set to console.log to see SQL queries
+    protocol: "postgres",
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
   }
 );
 
